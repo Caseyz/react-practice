@@ -1,16 +1,24 @@
+import { Provider } from 'react-redux'
+import store from './store/store'
+import Show from './pages/show/index'
+import BtnGroup from './pages/btn/index'
+
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        height: 200,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
-      React Practice Master Branch(保持不变，去其他分支尝试！！！)
-    </div>
+    <Provider store={store}>
+      <div
+        className="App"
+        style={{
+          height: 200,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Show></Show>
+        <BtnGroup></BtnGroup>
+      </div>
+    </Provider>
   );
 }
 
