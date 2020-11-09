@@ -9,7 +9,27 @@ function App() {
         alignItems: 'center'
       }}
     >
-      React Practice Master Branch(保持不变，去其他分支尝试！！！)
+      <i
+        className="iconfont"
+        style={{
+          fontSize: 100,
+          color: 'red'
+        }}
+      >&#xe606;</i>
+      <i
+        className="iconfont"
+        style={{
+          fontSize: 100,
+          color: 'skyblue'
+        }}
+      >&#xec50;</i>
+      <i
+        className="iconfont"
+        style={{
+          fontSize: 100,
+          color: 'green'
+        }}
+      >&#xe629;</i>
     </div>
   );
 }
