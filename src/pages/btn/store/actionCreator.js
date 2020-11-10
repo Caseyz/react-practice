@@ -1,5 +1,7 @@
-import { ADDCOUNT, REDUCECOUNT } from './actionTypes'
+import getResult from '../../../mock/index'
+import { ADDCOUNT, REDUCECOUNT, ISFIVE } from './actionTypes'
 
+// 增加
 const addCount = (count) => {
     return {
         type: ADDCOUNT,
@@ -7,6 +9,7 @@ const addCount = (count) => {
     }
 }
 
+// 减小
 const reduceCount = (count) => {
     return {
         type: REDUCECOUNT,
@@ -14,7 +17,22 @@ const reduceCount = (count) => {
     }
 }
 
+// 是否为5
+const isFive = (result) => {
+    return {
+        type: ISFIVE,
+        payload: result
+    }
+}
+
+const toVerification = count => dispatch => (
+    getResult(count).then(res => dispatch(isFive(res.data)))
+)
+
+
+
 export {
     addCount,
-    reduceCount
+    reduceCount,
+    toVerification
 }

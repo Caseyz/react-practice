@@ -3,10 +3,11 @@ import { connect } from 'react-redux'
 
 class Index extends Component {
     render() {
-        const { count } = this.props
+        const { count, isFive } = this.props
         return (
             <div>
-                {count}
+                <div>{count}</div>
+                <div>{isFive === 0 ? '否' : '是'}</div>
             </div>
         )
     }
@@ -14,7 +15,8 @@ class Index extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        count: state.btnReducer.count
+        count: state.btnReducer.count,
+        isFive: state.btnReducer.isFive
     }
 }
 
