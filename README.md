@@ -8,5 +8,5 @@
 
 > daily/iconfont : 在react中使用iconfont
 
-> daily/react-simple-code : react源码的实现
+> daily/react-simple-code : react简单部分源码的实现
 
