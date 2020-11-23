@@ -1,5 +1,8 @@
 
-// 文本类型转为对象
+/**
+ * 文本类型转为对象
+ * @param {文本节点} text 
+ */
 function createTextElement(text) {
     return {
         type: 'TEXT',
@@ -10,6 +13,12 @@ function createTextElement(text) {
     }
 }
 
+/**
+ * 
+ * @param {容器类型} type 
+ * @param {属性} props 
+ * @param  {子标签} children 
+ */
 function createElement(type, props, ...children) {
     delete props.__source
     return {
@@ -21,6 +30,11 @@ function createElement(type, props, ...children) {
     }
 }
 
+/**
+ * 
+ * @param {虚拟dom} vdom 
+ * @param {容器dom对象} container 
+ */
 function render(vdom, container) {
     // container.innerHTML = `<pre>${JSON.stringify(vdom, null, 2)}</pre>`
     let dom = vdom.type === "TEXT"
