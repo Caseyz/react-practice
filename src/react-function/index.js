@@ -55,6 +55,8 @@ function render(vdom, container) {
     container.appendChild(dom)
 }
 
+
+
 // 下一个单元任务
 // render会初始化第一个任务
 let nextUnitOfWork = null
@@ -75,6 +77,8 @@ requestIdleCallback(workLoop)
 function performUnitOfWork(fiber){
     // 根据当前任务获取下一个任务
 }
+
+
 
 export default {
     createElement,
