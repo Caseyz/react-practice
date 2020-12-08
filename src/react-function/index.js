@@ -44,6 +44,7 @@ function render(vdom, container) {
     Object.keys(vdom.props)
         .filter(el => el !== 'children')
         .forEach(el => {
+            // 事件处理 属性兼容
             dom[el] = vdom.props[el]
         })
 
@@ -52,6 +53,27 @@ function render(vdom, container) {
     })
 
     container.appendChild(dom)
+}
+
+// 下一个单元任务
+// render会初始化第一个任务
+let nextUnitOfWork = null
+
+// 调度我们的diff或者渲染任务
+function workLoop(IdleDeadline) {
+    // 又下一个任务，并且当前帧还没有结束
+    while (nextUnitOfWork && IdleDeadline.timeRemaining() > 1) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork)
+    }
+    requestIdleCallback()
+}
+
+// 启动空闲时间处理
+requestIdleCallback(workLoop)
+
+// 获取下一个任务
+function performUnitOfWork(fiber){
+    // 根据当前任务获取下一个任务
 }
 
 export default {
