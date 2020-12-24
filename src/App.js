@@ -1,3 +1,6 @@
+import React from 'react'
+import Count from "./count";
+
 function App() {
   return (
     <div
@@ -9,7 +12,7 @@ function App() {
         alignItems: 'center'
       }}
     >
-      React Practice Master Branch(保持不变，去其他分支尝试！！！)
+      <Count />
     </div>
   );
 }
