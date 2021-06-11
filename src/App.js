@@ -1,15 +1,17 @@
+import Index from "./pages/index/index";
+
 function App() {
   return (
     <div
       className="App"
       style={{
         height: 200,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      React Practice Master Branch(保持不变，去其他分支尝试！！！)
+      <Index />
     </div>
   );
 }
