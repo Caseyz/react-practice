@@ -1,17 +1,33 @@
-function App() {
+import { observer } from "mobx-react";
+
+function App({ state }) {
   return (
     <div
       className="App"
       style={{
         height: 200,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      React Practice Master Branch(保持不变，去其他分支尝试！！！)
+      <span>{state.count}</span>
+      <button
+        onClick={() => {
+          state.increment();
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          state.decrement();
+        }}
+      >
+        -
+      </button>
     </div>
   );
 }
 
-export default App;
+export default observer(App);
