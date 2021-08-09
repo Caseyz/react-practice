@@ -12,6 +12,6 @@
 
 > daily/react-keep-alive : react简易keep-alive
 
-> daily/async-component : react异步加载组件
+> daily/async-component : react异步加载组件
 
 
