@@ -1,17 +1,17 @@
-### React中的练习分支说明
+### React 中的练习分支说明
 
-> 通过  npx create-react-app <项目名> 创建新项目
+> 通过 npx create-react-app <项目名> 创建新项目
 
-> master :  保持原有的react初始项目目录稍作修改
+> master : 保持原有的 react 初始项目目录稍作修改
 
-> daily/redux : 在react中使用redux
+> daily/redux : 在 react 中使用 redux
 
-> daily/iconfont : 在react中使用iconfont
+> daily/mobx : 在 react 中使用 mobx
 
-> daily/react-simple-code : react源码的实现
+> daily/iconfont : 在 react 中使用 iconfont
 
-> daily/react-keep-alive : react简易keep-alive
+> daily/react-simple-code : react 源码的实现
 
-> daily/async-component : react异步加载组件
+> daily/react-keep-alive : react 简易 keep-alive
 
-
+> daily/async-component : react 异步加载组件
